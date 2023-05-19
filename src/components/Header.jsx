@@ -45,7 +45,7 @@ const Header = () => {
                   <Link to={'/'}>Home</Link>
                 </Button>
                 <Button onClick={onClose} colorScheme='purple' variant={'ghost'}>
-                  <Link to={'/sourceCode'}>SourceCode</Link>
+                  <Link to={'/sourceCode'}>Source Code</Link>
                 </Button>
               </VStack>
             </DrawerBody>
