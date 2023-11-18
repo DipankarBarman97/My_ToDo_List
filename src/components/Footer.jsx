@@ -25,7 +25,13 @@ const Footer = () => {
     >
       <Stack direction={['column', 'row']} h={'full'} alignItems={'center'}>
         <VStack w={'full'} alignItems={['center', 'flex-start']}>
-          <Text fontWeight={'bold'} size={'md'} borderBottom={'2px solid'} pb={'1'} w={'25%'} >
+          <Text
+            fontWeight={'bold'}
+            size={'md'}
+            borderBottom={'2px solid'}
+            pb={'1'}
+            w={'25%'}
+          >
             About
           </Text>
           <Text

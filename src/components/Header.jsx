@@ -34,17 +34,25 @@ const Header = () => {
         <BiMenuAltLeft size={'20'} />
       </Button>
 
-      <Drawer isOpen={isOpen} placement="left" onClose={onClose} >
+      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay>
           <DrawerContent>
             <DrawerCloseButton />
             <DrawerHeader>My ToDo List</DrawerHeader>
             <DrawerBody>
               <VStack>
-                <Button onClick={onClose} colorScheme='purple' variant={'ghost'}>
+                <Button
+                  onClick={onClose}
+                  colorScheme="purple"
+                  variant={'ghost'}
+                >
                   <Link to={'/'}>Home</Link>
                 </Button>
-                <Button onClick={onClose} colorScheme='purple' variant={'ghost'}>
+                <Button
+                  onClick={onClose}
+                  colorScheme="purple"
+                  variant={'ghost'}
+                >
                   <Link to={'/sourceCode'}>Source Code</Link>
                 </Button>
               </VStack>

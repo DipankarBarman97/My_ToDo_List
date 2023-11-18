@@ -1,0 +1,27 @@
+/* App.css */
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #553c9ab4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #553c9a;
+  border-radius: 4rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d6bcfa;
+}
+
+/* Handle on drag */
+::-webkit-scrollbar-thumb:active {
+  background-color: #553c9a;
+}

@@ -2,10 +2,9 @@ import { Heading, VStack } from '@chakra-ui/react';
 import React from 'react';
 import AddTodoList from './AddTodoList';
 import TodoList from './TodoList';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 const Home = () => {
-
   // const initialTodos = [
   //   {
   //     id: 1,
@@ -22,23 +21,23 @@ const Home = () => {
   );
 
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos))
-  }, [todos])
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   function deleteTodo(id) {
     const newTodos = todos.filter(todo => {
       return todo.id !== id;
-    })
+    });
     setTodos(newTodos);
   }
 
   function addTodo(todo) {
-    setTodos([...todos, todo])
+    setTodos([...todos, todo]);
   }
 
   return (
     <>
-      <VStack h={'85vh'}>
+      <VStack>
         <Heading
           my={'4'}
           bgGradient={'linear(to-r, purple.700, purple.200)'}
@@ -51,7 +50,9 @@ const Home = () => {
           My ToDo List
         </Heading>
         <AddTodoList addTodo={addTodo} />
-        <TodoList todos={todos} deleteTodo={deleteTodo} />
+        <VStack minH={'50vh'} width={'100%'} pb={'4'}>
+          <TodoList todos={todos} deleteTodo={deleteTodo} />
+        </VStack>
       </VStack>
     </>
   );

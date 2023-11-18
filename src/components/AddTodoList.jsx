@@ -1,29 +1,28 @@
 import { Button, HStack, Input, useToast } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { FaPlus } from 'react-icons/fa';
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
 
 const AddTodoList = ({ addTodo }) => {
-
-    const toast = useToast();
+  const toast = useToast();
 
   function handleSubmit(e) {
     e.preventDefault();
 
     if (!content) {
-        toast({
-            title: 'No Content',
-            status: 'error',
-            duration: 4000,
-            isClosable: true,
-          })
-        return
+      toast({
+        title: 'No Content',
+        status: 'error',
+        duration: 4000,
+        isClosable: true,
+      });
+      return;
     }
 
     const todo = {
-        id: nanoid(),
-        body: content,
-    }
+      id: nanoid(),
+      body: content,
+    };
     addTodo(todo);
     setContent('');
   }
@@ -35,7 +34,7 @@ const AddTodoList = ({ addTodo }) => {
       <HStack my={'4'}>
         <Input
           variant={'filled'}
-          placeholder='Add task here..'
+          placeholder="Add task here.."
           value={content}
           onChange={e => setContent(e.target.value)}
         />
