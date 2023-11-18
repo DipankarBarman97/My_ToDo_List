@@ -37,7 +37,7 @@ const Home = () => {
 
   return (
     <>
-      <VStack h={'90vh'}>
+      <VStack minH={'90vh'}>
         <Heading
           my={'4'}
           bgGradient={'linear(to-r, purple.700, purple.200)'}
@@ -50,7 +50,7 @@ const Home = () => {
           My ToDo List
         </Heading>
         <AddTodoList addTodo={addTodo} />
-        <VStack minH={'50vh'} width={'100%'} pb={'4'}>
+        <VStack minH={'64vh'} width={'100%'} pb={'4'}>
           <TodoList todos={todos} deleteTodo={deleteTodo} />
         </VStack>
       </VStack>
