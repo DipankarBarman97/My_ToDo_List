@@ -37,7 +37,7 @@ const Home = () => {
 
   return (
     <>
-      <VStack>
+      <VStack h={'90vh'}>
         <Heading
           my={'4'}
           bgGradient={'linear(to-r, purple.700, purple.200)'}
